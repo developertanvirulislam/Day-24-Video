@@ -75,12 +75,15 @@ ul.main_top_menu li span {
     font-size: 18px;
 }
 ul.main_top_menu li a {
-    display: inline-block;
+    display: block;
     padding: 10px 15px;
     font-weight: 500;
     text-decoration: none;
     transition: .4s;
     color: #000;
+}
+.active{
+    color: #e93c3e !important;
 }
 ul.main_top_menu li:hover>a{
     color: #e93c3e;
@@ -105,17 +108,42 @@ ul.main_top_menu li {
     opacity: 0;
     display: flex;
     flex-direction: column;
-    width: 200px;
+    width: 250px;
     list-style: none;
     transition: all .4s ease-in-out;
+    box-shadow: 0 0 15px 0 rgb(0 0 0 / 10%);
 }
 ul.main_top_menu li:hover ul{
-    top: 100%;
+    top: 125%;
     visibility: visible;
     opacity: 1;
 }
 ul.main_top_menu li:hover ul li a:hover{
     letter-spacing: 1px;
+}
+/* 2nd DropDown */
+ul.main_top_menu li ul li{
+    position: relative !important;
+}
+ul.main_top_menu li ul li ul {
+    position: absolute !important;
+    top: 100% !important;
+    left: -105% !important;
+    padding-left: 10px;
+    background: #fafafa;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    list-style: none;
+    transition: all .4s ease-in-out !important;
+    box-shadow: 0 0 15px 0 rgb(0 0 0 / 10%);
+}
+ul.main_top_menu li ul li:hover ul{
+    top: 10% !important;
+    visibility: visible !important;
+    opacity: 1 !important;
 }
 
 /* Menu Call Section */
